@@ -9,13 +9,14 @@ import javax.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter @Setter
+@Getter
+@Setter
 @Entity
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    
+
     @Basic
     private String email;
     private String password;
@@ -23,7 +24,7 @@ public class User {
     private String apellido;
     private String foto;
     private boolean isEnabled;
-    
+
     public User() {
     }
 

@@ -7,6 +7,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -32,5 +33,9 @@ public class AboutController {
     @DeleteMapping ("/delete/about/{id}")
     public void borrarAbout(@PathVariable Long id){
           aboutServ.borrarAbout(id);
+    }
+    @PostMapping("/edit/about/{id}")
+    public void  updateAbout(@RequestBody About abo){
+        aboutServ.updateAbout(abo);
     }
 }

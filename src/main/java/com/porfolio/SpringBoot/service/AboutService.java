@@ -32,5 +32,10 @@ public class AboutService implements IAboutService{
     public About buscarAbout(Long id) {
         return aboRepo.findById(id).orElse(null);
     }
-   
+
+    @Override
+    public void updateAbout(About abo) {
+        aboRepo.save(abo);
+    }
+
 }

@@ -10,4 +10,5 @@ public interface IAboutService {
     public void agregarAbout(About abo);
     public void borrarAbout(Long id);
     public About buscarAbout(Long id);
+    public void updateAbout(About abo);
 }
